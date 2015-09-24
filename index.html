@@ -3,17 +3,59 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet"  href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <link rel="stylesheet" href="css/MarkerCluster.default.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
 </head>
 <body>
   <div class="container">
+    <div class="row" id="login">
+      <div class="col-sm-8">
+        <label for="user">User Name:</label>
+        <input id="UserId" type="text" name="user"></input>
+        <label for="password">Password:</label>
+        <input id="Pwd" type="password" name="password"></input>
+        <button id="submit">Submit</input>
+      </div>
+      <div class="col-sm-4 text-center">
+      </div>
+    </div>
     <div class="row">
-      <div class="col-sm-12 text-center">
-        <h1>TEST</h1>
+      <div class="col-xs-12">
+        <div id="map"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <table id="assetsTable" class="display" style="display:none;">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Province</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td>Loading...</td>
+            <td>Loading...</td>
+            <td>Loading...</td>
+            <td>Loading...</td>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
   <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/underscore.min.js"></script>
+  <script type="text/javascript" src="js/Base64.js"></script>
+  <script src="js/leaflet.js"></script>
+  <script src="js/leaflet.markercluster-src.js"></script>
+  <script src="js/leaflet.ajax.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
